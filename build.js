@@ -216,4 +216,18 @@ console.log("Copying SvelteGraphics.svelte to npm package");
 const SvelteGraphics = fs.readFileSync(__dirname + "/SvelteGraphics.svelte", "utf8");
 fs.writeFileSync(path.join(desFolder, "SvelteGraphics.svelte"), SvelteGraphics);
 
+// Generate package.json for dist folder
+console.log("Generating package.json for dist folder");
+const packageSrc = fs.readFileSync(__dirname + "/package.json", "utf8");
+
+let packageParser = JSON.parse(packageSrc); 
+delete packageParser["scripts"]; 
+delete packageParser["bugs"]; 
+delete packageParser["dependencies"];
+
+packageParser.main = "SvelteGraphics.svelte"
+let packageDes = JSON.stringify(packageParser, null, 2);
+
+fs.writeFileSync(path.join(desFolder, "package.json"), packageDes);
+
 console.log("Bye!");
