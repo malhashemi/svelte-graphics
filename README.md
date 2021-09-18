@@ -46,8 +46,8 @@ npm i svelte-graphics
 
 **Note**: File names are PascalCased from the original SVG names:
 
-**Attached file** converts to **AttachedFile.svelte**  
-**ab-testing** converts to **AbTesting**
+- **Attached file** converts to **AttachedFile.svelte**  
+- **ab-testing** converts to **AbTesting**
 
 ## Notes
 
