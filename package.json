@@ -1,0 +1,24 @@
+{
+  "name": "svelte-graphics",
+  "version": "1.0.0",
+  "description": "Svelte Graphics Generator",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohadel1990/sveltegraphics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/mohadel1990/sveltegraphics#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "edge-js": "^16.6.0"
+  }
+}
