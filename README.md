@@ -71,9 +71,9 @@ npm i
 npm run build
 ```
 
-To add a new library just put the SVG files in a folder named identical to the library name and update sources.json
-
-**Note:** attributes "empty, color, PrimaryColor or SecondaryColor" is set according to the original SVG.
+- To add a new library add the SVG files to a folder named identical to the library name
+- Copy the library folder to `/sources/illustrations` or `/sources/icons` depending on the library type.
+- Update sources.json as seen in the below example
 
 ```json
 {
@@ -96,6 +96,8 @@ To add a new library just put the SVG files in a folder named identical to the l
   }
 }
 ```
+
+**Note:** attributes "empty, color, PrimaryColor or SecondaryColor" is set according to the original SVG.
 
 ## Credits
 
