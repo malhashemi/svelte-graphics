@@ -16,7 +16,12 @@ const getDirectories = source =>
 
 
 const srcFolder = __dirname + "/sources/";
-const desFolder = __dirname + "/out/";
+const desFolder = __dirname + "/dist/";
+
+//create desFolder in the directory if it doesn't exist
+if (!fs.existsSync(desFolder)) {
+  fs.mkdirSync(desFolder);
+}
 
 //scan folders in the source path
 const graphics = getDirectories(srcFolder);
@@ -28,7 +33,13 @@ for (let i = 0; i < graphics.length; i++) {
 
   //confirm the current directory is properly declared in the sources.json ex: "icons", "illustrations" before processing
   if (sources[currentGraphic]) {
+
     const currentGraphicDir = getDirectories(srcFolder + currentGraphic);
+    const distGraphicDir = desFolder + currentGraphic;
+    //create desGraphic in the dist directory if it doesn't exist
+    if (!fs.existsSync(distGraphicDir)) {
+      fs.mkdirSync(distGraphicDir);
+    }
 
     for (let i = 0; i < currentGraphicDir.length; i++) {
       const library = currentGraphicDir[i];
@@ -46,7 +57,7 @@ for (let i = 0; i < graphics.length; i++) {
         } else {
           template = fs.readFileSync(__dirname + "/template.svelte", "utf8");
         }
-        
+
 
         const srcDir = srcFolder + currentGraphic + "/" + library;
         const destDir = desFolder + currentGraphic + "/" + library;
@@ -150,7 +161,7 @@ for (let i = 0; i < graphics.length; i++) {
           // Add attrs
           $svg.attr("width", "{width}");
           $svg.attr("height", "{height}");
-          
+
           //add \<title\> to the component body
           name = generateName(name);
           $svg.prepend('<title>' + name + '</title>');
