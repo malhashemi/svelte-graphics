@@ -43,10 +43,8 @@ for (let i = 0; i < graphics.length; i++) {
         let template;
         if (("PrimaryColor" in sourcesObj)) {
           template = fs.readFileSync(__dirname + "/template-2-colors.svelte", "utf8");
-          console.log("Primary Color keyword");
         } else {
           template = fs.readFileSync(__dirname + "/template.svelte", "utf8");
-          console.log("No Keyword");
         }
         
 

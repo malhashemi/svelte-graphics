@@ -16,7 +16,7 @@ npm i svelte-graphics
 
   let SvelteGraphic = {
     id: `AcceptTasks`, //Graphic Name
-    type: `illus`, // Icon or illus (illustrations)
+    type: `illus`, // icon or illus (illustrations)
     lib: `unDraw` // Library Name
   };
   
