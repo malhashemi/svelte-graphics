@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/mohadel1990/sveltegraphics.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mohammad Alhashemi",
+  "license": "MIT",
   "bugs": {
     "url": ""
   },
