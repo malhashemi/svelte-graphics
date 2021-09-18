@@ -12,7 +12,7 @@ npm i svelte-graphics
 
 ```svelte
 <script>
-  import SvelteGraphics from "svelte-graphics/SvelteGraphics.svelte";
+  import SvelteGraphics from "svelte-graphics";
 
   let SvelteGraphic = {
     id: `AcceptTasks`, //Graphic Name
