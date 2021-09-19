@@ -2,6 +2,19 @@
   "illustrations": {
     "unDraw": {
       "color": "#6C63FF"
+    },
+    "Scale": {
+      "color": "#4D61FC"
+    },
+    "ScaleMulti": {
+      "color1": "#282F4F",
+      "color2": "#157075",
+      "color3": "#803155"
+    },
+    "ScaleMultiMask": {
+      "color1": "#282F4F",
+      "color2": "#157075",
+      "color3": "#803155"
     }
   },
   "icons": {

@@ -13,8 +13,9 @@
 	let width;
 	let height;
 	let color;
-	let PrimaryColor;
-	let SecondaryColor;
+	let color1;
+	let color2;
+	let color3;
 	let modules;
 	let path;
 
@@ -40,8 +41,9 @@
 	height = SvelteGraphicSpecs.height ? SvelteGraphicSpecs.height : size;
 
 	$: color = SvelteGraphicSpecs.color ? SvelteGraphicSpecs.color : `currentColor`;
-	$: PrimaryColor = SvelteGraphicSpecs.PrimaryColor ? SvelteGraphicSpecs.PrimaryColor : color;
-	$: SecondaryColor = SvelteGraphicSpecs.SecondaryColor ? SvelteGraphicSpecs.SecondaryColor : color;
+	$: color1 = SvelteGraphicSpecs.color1 ? SvelteGraphicSpecs.color1 : color;
+	$: color2 = SvelteGraphicSpecs.color2 ? SvelteGraphicSpecs.color2 : color;
+	$: color3 = SvelteGraphicSpecs.color3 ? SvelteGraphicSpecs.color3 : color;
 	//let viewBox = SvelteGraphicSpecs.viewBox ? SvelteGraphicSpecs.viewBox : `0 0 24 24`;
 
 
@@ -51,4 +53,4 @@
 
 </script>
 
-<svelte:component this={modules} {color} {PrimaryColor} {SecondaryColor} {size} {width} {height} />
+<svelte:component this={modules} {color} {color1} {color2} {color3} {size} {width} {height} />

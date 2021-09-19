@@ -25,9 +25,10 @@ npm i svelte-graphics
     width: '500',
     height: '500',
     color: 'teal'
-     //if the library has 2 colors use PrimaryColor and SecondaryColor
-    // PrimaryColor: '#6C63FF'
-    // SecondaryColor: '#2b3752' 
+    //if the library has 2 or 3 colors use the following keys
+    // color1: '#282F4F'
+    // color2: '#157075' 
+    // color3: '#803155'
   };
 </script>
 
@@ -43,6 +44,9 @@ npm i svelte-graphics
 ### Illustrations (illus)
 
 - unDraw - find illustrations at [undraw.co](https://undraw.co)
+- Scale - single color illustrations at [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations)
+- ScaleMulti - Multi-color illustrations at [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations)
+- ScaleMultiMask - Same illustrations as above but with characters wearing masks
 
 **Note**: File names are PascalCased from the original SVG names:
 
@@ -82,8 +86,8 @@ npm run build
       "color" : "#c1d61f"
     },
     "example-double-colors" : {
-      "PrimaryColor":"#08cbd9",
-      "SecondaryColor": "#c013c3"
+      "color1":"#08cbd9",
+      "color2": "#c013c3"
     },
     "unDraw": {
       "color": "#6C63FF"
@@ -97,7 +101,7 @@ npm run build
 }
 ```
 
-**Note:** attributes "empty, color, PrimaryColor or SecondaryColor" is set according to the original SVG.
+**Note:** attributes "empty, color, colorN" is set according to the original SVG.
 
 ## Credits
 

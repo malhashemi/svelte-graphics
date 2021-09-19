@@ -52,10 +52,12 @@ for (let i = 0; i < graphics.length; i++) {
 
         // Define template based on "no color", "color" or "PrimaryColor and SecondaryColor"
         let template;
-        if (("PrimaryColor" in sourcesObj)) {
-          template = fs.readFileSync(__dirname + "/template-2-colors.svelte", "utf8");
+        if (("color3" in sourcesObj)) {
+          template = fs.readFileSync(__dirname + "/templates/template-3-colors.svelte", "utf8");
+        } else if (("color2" in sourcesObj)){
+          template = fs.readFileSync(__dirname + "/templates/template-2-colors.svelte", "utf8");
         } else {
-          template = fs.readFileSync(__dirname + "/template.svelte", "utf8");
+          template = fs.readFileSync(__dirname + "/templates/template.svelte", "utf8");
         }
 
 
