@@ -21,10 +21,11 @@ npm i svelte-graphics
   };
   
   let SvelteGraphicSpecs = {
-    //size: `500`,
-    width: '500',
-    height: '500',
-    color: 'teal'
+    // `size` replaces both `width` and `height` default is "500px" for illustrations and "1em" for icons if not set
+    //size: `700`,
+    width: '700',
+    height: '700',
+    color: 'teal' // default "currentColor"
     // if the library has 2 or 3 colors use the following keys
     // color1: '#282F4F'
     // color2: '#157075' 
