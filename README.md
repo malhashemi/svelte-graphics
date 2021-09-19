@@ -65,6 +65,10 @@ If you wrap the graphics into other element set the **display** of the parent el
 - Add more libraries.
 - Launch a webpage for easier viewing and usage.
 
+## Planned Work
+
+- Add SkinTone for certain libraries.
+
 ## Contribute
 
 This is a compiler that transforms the SVG files to svelte components utilizing [cheerio](https://cheerio.js.org)
