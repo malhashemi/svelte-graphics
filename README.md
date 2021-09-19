@@ -25,7 +25,7 @@ npm i svelte-graphics
     width: '500',
     height: '500',
     color: 'teal'
-    //if the library has 2 or 3 colors use the following keys
+    // if the library has 2 or 3 colors use the following keys
     // color1: '#282F4F'
     // color2: '#157075' 
     // color3: '#803155'
@@ -39,11 +39,11 @@ npm i svelte-graphics
 
 ### Icons
 
-- MaterialDesign - find icons at [materialdesignicons.com](https://materialdesignicons.com)
+- MaterialDesign - original icons at [materialdesignicons.com](https://materialdesignicons.com)
 
 ### Illustrations (illus)
 
-- unDraw - find illustrations at [undraw.co](https://undraw.co)
+- unDraw - original illustrations at [undraw.co](https://undraw.co)
 - Scale - single color illustrations at [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations)
 - ScaleMulti - Multi-color illustrations at [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations)
 - ScaleMultiMask - Same illustrations as above but with characters wearing masks
@@ -100,8 +100,6 @@ npm run build
   }
 }
 ```
-
-**Note:** attributes "empty, color, colorN" is set according to the original SVG.
 
 ## Credits
 
