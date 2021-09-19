@@ -21,7 +21,7 @@ npm i svelte-graphics
   };
   
   let SvelteGraphicSpecs = {
-    // `size` replaces both `width` and `height` default is "500px" for illustrations and "1em" for icons if not set
+    //size replaces both width and height default is "500px" for illustrations and "1em" for icons if not set
     //size: `700`,
     width: '700',
     height: '700',
