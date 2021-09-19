@@ -22,7 +22,7 @@ npm i svelte-graphics
   
   let SvelteGraphicSpecs = {
     //size is overwritten by either width or height default is "500px" for illustrations and "1em" for icons if not set
-    size: `700`,
+    size: '700',
     //width: '700',
     //height: '700',
     color: 'teal' // default "currentColor"
