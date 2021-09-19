@@ -35,6 +35,8 @@ npm i svelte-graphics
 <SvelteGraphics {SvelteGraphic} {SvelteGraphicSpecs} />
 ```
 
+**Note:** `id`, `lib` and `color` are reactive by design, feel free to bind them to user inputs.
+
 ## Available Libraries
 
 ### Icons
