@@ -42,14 +42,14 @@ npm i svelte-graphics
 
 ### Icons
 
-- MaterialDesign - original icons at [materialdesignicons.com](https://materialdesignicons.com)
+- MaterialDesign - original icons at [materialdesignicons.com](https://materialdesignicons.com).
 
 ### Illustrations (illus)
 
-- unDraw - original illustrations at [undraw.co](https://undraw.co)
-- Scale - single color illustrations at [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations)
-- ScaleMulti - Multi-color illustrations at [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations)
-- ScaleMultiMask - Same illustrations as above but with characters wearing masks
+- unDraw - original illustrations at [undraw.co](https://undraw.co).
+- Scale - single color illustrations at [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations).
+- ScaleMulti - Multi-color illustrations at [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations).
+- ScaleMultiMask - Same illustrations as above but with characters wearing masks.
 
 **Note**: File names are PascalCased from the original SVG names:
 
@@ -58,7 +58,7 @@ npm i svelte-graphics
 
 ## Notes
 
-If you wrap the graphics into other element set the **display** of the parent element to **flex**
+If you wrap the graphics into other element set the **display** of the parent element to **flex**.
 
 ## Work in progress
 
@@ -71,9 +71,9 @@ If you wrap the graphics into other element set the **display** of the parent el
 
 ## Contribute
 
-This is a compiler that transforms the SVG files to svelte components utilizing [cheerio](https://cheerio.js.org)
+This is a compiler that transforms the SVG files to svelte components utilizing [cheerio](https://cheerio.js.org).
 
-To develop
+To develop:
 
 ```sh
 git clone https://github.com/mohadel1990/sveltegraphics.git
@@ -82,9 +82,9 @@ npm i
 npm run build
 ```
 
-- To add a new library add the SVG files to a folder named identical to the library name
+- To add a new library add the SVG files to a folder named identical to the library name.
 - Copy the library folder to `/sources/illustrations` or `/sources/icons` depending on the library type.
-- Update sources.json as seen in the below example
+- Update sources.json as seen in the below example.
 
 ```json
 {
