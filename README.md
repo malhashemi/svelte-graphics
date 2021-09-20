@@ -25,15 +25,16 @@ npm i svelte-graphics
   let SvelteGraphicSpecs = {
     type: "illus", // icon or illus (illustrations)
     lib: "unDraw", // Library Name
-    //size is overwritten by either width or height default is "500px" for illustrations and "1em" for icons if not set
+    //size is overwritten by either width or height 
+    //default is "500px" for illustrations and "1em" for icons if not set
     size: "700",
-    //width: '700',
-    //height: '700',
+    //width: "700",
+    //height: "700",
     color: "teal", // default "currentColor"
     // if the library has 2 or 3 colors use the following keys
-    // color1: '#282F4F'
-    // color2: '#157075'
-    // color3: '#803155'
+    // color1: "#282F4F"
+    // color2: "#157075"
+    // color3: "#803155"
   };
 </script>
 
