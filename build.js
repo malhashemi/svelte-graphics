@@ -52,14 +52,23 @@ for (let i = 0; i < graphics.length; i++) {
 
         // Define template based on "no color", "color" or "PrimaryColor and SecondaryColor"
         let template;
-        if (("color3" in sourcesObj)) {
-          template = fs.readFileSync(__dirname + "/templates/template-3-colors.svelte", "utf8");
-        } else if (("color2" in sourcesObj)){
-          template = fs.readFileSync(__dirname + "/templates/template-2-colors.svelte", "utf8");
-        } else {
-          template = fs.readFileSync(__dirname + "/templates/template.svelte", "utf8");
+        if (currentGraphic == "icons") {
+          if (("color3" in sourcesObj)) {
+            template = fs.readFileSync(__dirname + "/templates/template-icons-3-colors.svelte", "utf8");
+          } else if (("color2" in sourcesObj)) {
+            template = fs.readFileSync(__dirname + "/templates/template-icons-2-colors.svelte", "utf8");
+          } else {
+            template = fs.readFileSync(__dirname + "/templates/template-icons.svelte", "utf8");
+          };
+        } else if (currentGraphic == "illustrations") {
+          if (("color3" in sourcesObj)) {
+            template = fs.readFileSync(__dirname + "/templates/template-3-colors.svelte", "utf8");
+          } else if (("color2" in sourcesObj)) {
+            template = fs.readFileSync(__dirname + "/templates/template-2-colors.svelte", "utf8");
+          } else {
+            template = fs.readFileSync(__dirname + "/templates/template.svelte", "utf8");
+          };
         }
-
 
         const srcDir = srcFolder + currentGraphic + "/" + library;
         const destDir = desFolder + currentGraphic + "/" + library;
@@ -222,9 +231,9 @@ fs.writeFileSync(path.join(desFolder, "SvelteGraphics.svelte"), SvelteGraphics);
 console.log("Generating package.json for dist folder");
 const packageSrc = fs.readFileSync(__dirname + "/package.json", "utf8");
 
-let packageParser = JSON.parse(packageSrc); 
-delete packageParser["scripts"]; 
-delete packageParser["bugs"]; 
+let packageParser = JSON.parse(packageSrc);
+delete packageParser["scripts"];
+delete packageParser["bugs"];
 delete packageParser["dependencies"];
 
 packageParser.main = "SvelteGraphics.svelte"

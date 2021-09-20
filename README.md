@@ -10,33 +10,68 @@ npm i svelte-graphics
 
 ## Usage
 
+### Using SvelteGraphics Controller
+
 ```svelte
+<!-- App.svelte -->
 <script>
   import SvelteGraphics from "svelte-graphics";
 
   let SvelteGraphic = {
-    id: `AcceptTasks`, //Graphic Name
-    type: `illus`, // icon or illus (illustrations)
-    lib: `unDraw` // Library Name
+    id: "AcceptTasks", //Graphic Name
   };
-  
+
+  // SvelteGraphicSpecs are meant to be reusable for each library
   let SvelteGraphicSpecs = {
+    type: "illus", // icon or illus (illustrations)
+    lib: "unDraw", // Library Name
     //size is overwritten by either width or height default is "500px" for illustrations and "1em" for icons if not set
-    size: '700',
+    size: "700",
     //width: '700',
     //height: '700',
-    color: 'teal' // default "currentColor"
+    color: "teal", // default "currentColor"
     // if the library has 2 or 3 colors use the following keys
     // color1: '#282F4F'
-    // color2: '#157075' 
+    // color2: '#157075'
     // color3: '#803155'
   };
 </script>
 
-<SvelteGraphics {SvelteGraphic} {SvelteGraphicSpecs} />
+<SvelteGraphics
+  SvelteGraphic="{SvelteGraphic}"
+  SvelteGraphicSpecs="{SvelteGraphicSpecs}"
+/>
 ```
 
 **Note:** `id`, `lib` and `color` are reactive by design, feel free to bind them to user inputs.
+
+### Using Individual Components
+
+1. Delete svelte-graphics from package.json dependencies.
+2. Copy needed components from `node_modules/svelte-graphics` to your components folder ex. `./components/illustrations/`.
+3. Consume the components as per the example below:
+
+```svelte
+<!-- App.svelte -->
+<script>
+  import Camping from "./components/illustrations/Camping.svelte";
+  let size = "700";
+  let width = "700";
+  let height = "700";
+  let color1 = "#282F4F";
+  let color2 = "#157075";
+  let color3 = "#803155";
+</script>
+
+<Camping
+  color1="{color1}"
+  color2="{color2}"
+  color3="{color3}"
+  size="{size}"
+  width="{width}"
+  height="{height}"
+/>
+```
 
 ## Available Libraries
 
@@ -53,7 +88,7 @@ npm i svelte-graphics
 
 **Note**: File names are PascalCased from the original SVG names:
 
-- **Attached file** converts to **AttachedFile.svelte**.  
+- **Attached file** converts to **AttachedFile.svelte**.
 - **ab-testing** converts to **AbTesting**.
 
 ## Notes
@@ -65,7 +100,7 @@ If you wrap the graphics into other element set the **display** of the parent el
 - Add more libraries.
 - Launch a webpage for easier viewing and usage.
 
-## Planned Work
+## Future Work
 
 - Add SkinTone for certain libraries.
 
@@ -89,11 +124,11 @@ npm run build
 ```json
 {
   "illustrations": {
-    "example-single-color" : {
-      "color" : "#c1d61f"
+    "example-single-color": {
+      "color": "#c1d61f"
     },
-    "example-double-colors" : {
-      "color1":"#08cbd9",
+    "example-double-colors": {
+      "color1": "#08cbd9",
       "color2": "#c013c3"
     },
     "unDraw": {
@@ -101,7 +136,7 @@ npm run build
     }
   },
   "icons": {
-    "example": {"color":"black"},
+    "example": { "color": "black" },
     "example2": {},
     "MaterialDesign": {}
   }
