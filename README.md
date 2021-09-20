@@ -17,16 +17,16 @@ npm i svelte-graphics
 <script>
   import SvelteGraphics from "svelte-graphics";
 
-  let SvelteGraphic = {
-    id: "AcceptTasks", //Graphic Name
-  };
+  let SvelteGraphic = "AcceptTasks"; //Graphic Name
 
-  // SvelteGraphicSpecs are meant to be reusable for each library
+  // SvelteGraphicSpecs are meant to be reusable per library
   let SvelteGraphicSpecs = {
     type: "illus", // icon or illus (illustrations)
     lib: "unDraw", // Library Name
-    //size is overwritten by either width or height 
-    //default is "500px" for illustrations and "1em" for icons if not set
+    /*
+    size is overwritten by either width or height
+    default is "500px" for illustrations and "1em" for icons if not set
+    */
     size: "700",
     //width: "700",
     //height: "700",
@@ -44,7 +44,7 @@ npm i svelte-graphics
 />
 ```
 
-**Note:** `id`, `lib` and `color` are reactive by design, feel free to bind them to user inputs.
+**Note:** `SvelteGraphic`, and `color` are reactive by design, feel free to bind them to user inputs.
 
 ### Using Individual Components
 

@@ -1,14 +1,14 @@
 <script>
-	export let SvelteGraphic = {
-		id: ``,
-		lib: ``
+	export let SvelteGraphic;
+	export let SvelteGraphicSpecs = {
+		lib: ``,
+		type: ``
 	};
-	export let SvelteGraphicSpecs = {};
 
 	let graphic;
+
 	let lib;
 	let type;
-
 	let size;
 	let width;
 	let height;
@@ -19,9 +19,10 @@
 	let modules;
 	let path;
 
-	$: graphic = SvelteGraphic.id;
-	type = SvelteGraphic.type;
-	$: lib = SvelteGraphic.lib;
+	$: graphic = SvelteGraphic;
+
+	type = SvelteGraphicSpecs.type;
+	lib = SvelteGraphicSpecs.lib;
 
 	switch (type) {
 		case `icon`:
