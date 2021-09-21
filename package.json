@@ -1,6 +1,6 @@
 {
   "name": "svelte-graphics",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Library of svelte components created from numerous royalty-free illustrations and icons",
   "main": "build.js",
   "scripts": {
@@ -15,8 +15,14 @@
   },
   "author": "Mohammad Alhashemi",
   "license": "MIT",
+  "keywords": [
+    "Svelte",
+    "Graphics",
+    "Illustrations",
+    "Icons"
+  ],
   "bugs": {
-    "url": ""
+    "url": "https://github.com/malhashemi/svelte-graphics/issues"
   },
   "homepage": "https://github.com/malhashemi/svelte-graphics#readme",
   "dependencies": {

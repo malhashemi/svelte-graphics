@@ -233,7 +233,6 @@ const packageSrc = fs.readFileSync(__dirname + "/package.json", "utf8");
 
 let packageParser = JSON.parse(packageSrc);
 delete packageParser["scripts"];
-delete packageParser["bugs"];
 delete packageParser["dependencies"];
 
 packageParser.main = "SvelteGraphics.svelte"
