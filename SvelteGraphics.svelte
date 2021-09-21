@@ -51,7 +51,7 @@
 	
 	$: path = `./${type}/${lib}/${graphic}.svelte`;
 	$: onMount(async () => {
-		modules = (await import(path)).default;
+		modules = (await import(/* @vite-ignore */path)).default;
 	});
 
 </script>

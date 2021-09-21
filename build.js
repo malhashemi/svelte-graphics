@@ -232,7 +232,6 @@ for (let i = 0; i < graphics.length; i++) {
 
         process.stdout.write("\n");
       }
-      graphicsList[currentGraphic][library].colors = graphicsList[currentGraphic][library].colors.toString();
     }
   }
 }
