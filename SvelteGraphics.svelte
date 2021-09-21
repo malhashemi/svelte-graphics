@@ -4,7 +4,7 @@
 		lib: ``,
 		type: ``
 	};
-
+	import { onMount } from 'svelte';
 	let graphic;
 
 	let lib;
@@ -50,7 +50,9 @@
 
 	
 	$: path = `./${type}/${lib}/${graphic}.svelte`;
-	$: import(/* @vite-ignore */path).then((res) => (modules = res.default)); 
+	$: onMount(async () => {
+		modules = (await import(path)).default;
+	});
 
 </script>
 

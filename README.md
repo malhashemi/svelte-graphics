@@ -1,6 +1,6 @@
 # Svelte Graphics
 
-Svelte Graphics is a library of svelte components created from numerous royalty-free illustrations and icons.
+Svelte Graphics is a library of customizable svelte components created from numerous royalty-free illustrations and icons.
 
 ## Install
 

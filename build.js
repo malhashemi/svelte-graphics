@@ -14,6 +14,8 @@ const getDirectories = source =>
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
 
+//Declare file list JSON
+let graphicsList = {};
 
 const srcFolder = __dirname + "/sources/";
 const desFolder = __dirname + "/dist/";
@@ -30,7 +32,7 @@ for (let i = 0; i < graphics.length; i++) {
 
 
   const currentGraphic = graphics[i];
-
+  graphicsList[currentGraphic] = {};
   //confirm the current directory is properly declared in the sources.json ex: "icons", "illustrations" before processing
   if (sources[currentGraphic]) {
 
@@ -44,6 +46,22 @@ for (let i = 0; i < graphics.length; i++) {
     for (let i = 0; i < currentGraphicDir.length; i++) {
       const library = currentGraphicDir[i];
       let sourcesObj = sources[currentGraphic][library];
+
+      graphicsList[currentGraphic][library] = {};
+      graphicsList[currentGraphic][library]["graphic"] = [];
+      graphicsList[currentGraphic][library]["colors"] = 0;
+
+      //find the number of colors in the library
+      if (sourcesObj && Object.keys(sourcesObj).length === 0 && sourcesObj.constructor === Object) {
+        graphicsList[currentGraphic][library].colors++
+      } else {
+        graphicsList[currentGraphic][library]["colors"] = Object.keys(sourcesObj).length;
+      }
+
+
+
+
+
 
       //confirm the current library is declared in the sources.json ex: "unDraw" before proceeding
       if (sourcesObj) {
@@ -114,14 +132,13 @@ for (let i = 0; i < graphics.length; i++) {
         }
 
         /**
-     * Automatically calls by `generateName` to create svelte file name
-     * @param {*} svgName 
+     * Adds .svelte to filename
+     * @param {*} extensionlessFilename 
      * @returns Generated component Name
      */
-        const generateComponentFilename = (svgName) => {
+        const generateComponentFilename = (extensionlessFilename) => {
 
-          let name = generateName(svgName);
-          return name + ".svelte";
+          return extensionlessFilename + ".svelte";
         }
 
         /**
@@ -181,6 +198,7 @@ for (let i = 0; i < graphics.length; i++) {
           if (sourcesObj && Object.keys(sourcesObj).length === 0 && sourcesObj.constructor === Object) {
             const $path = $svg.find("> path");
             $path.attr("fill", "{color}");
+            //increments the number of colors for this library in the file list
           }
 
           return template.replace("%svg%", $.html($svg));
@@ -192,13 +210,17 @@ for (let i = 0; i < graphics.length; i++) {
 
         //iterate through svg files and create svelte components
         for (let i = 0; i < filenames.length; i++) {
+
           process.stdout.clearLine();
           process.stdout.cursorTo(0);
           process.stdout.write("Component" + ("" + (i + 1)).padStart(5, " ") + " / " + filenames.length);
 
           const filename = filenames[i];
+
           const file = fs.readFileSync(path.join(srcDir, filename), "utf8");
-          const componentFilename = generateComponentFilename(filename);
+          const extensionlessFilename = generateName(filename);
+          graphicsList[currentGraphic][library].graphic.push(extensionlessFilename);
+          const componentFilename = generateComponentFilename(extensionlessFilename);
           const componentSource = generateComponentSource(file, filename);
 
           fs.writeFileSync(
@@ -210,6 +232,7 @@ for (let i = 0; i < graphics.length; i++) {
 
         process.stdout.write("\n");
       }
+      graphicsList[currentGraphic][library].colors = graphicsList[currentGraphic][library].colors.toString();
     }
   }
 }
@@ -240,5 +263,16 @@ packageParser.main = "SvelteGraphics.svelte"
 let packageDes = JSON.stringify(packageParser, null, 2);
 
 fs.writeFileSync(path.join(desFolder, "package.json"), packageDes);
+
+//create graphics list
+console.log("Generating Files List");
+
+let graphicsListFile = fs.readFileSync(__dirname + "/templates/graphicsList.template", "utf8");
+
+
+graphicsList = JSON.stringify(graphicsList, null, 2);
+
+graphicsListFile = graphicsListFile.replace(/%graphicsList%/gi, graphicsList);
+fs.writeFileSync(path.join(desFolder, "graphicsList.js"), graphicsListFile);
 
 console.log("Bye!");
