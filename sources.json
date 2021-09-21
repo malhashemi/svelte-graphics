@@ -18,6 +18,7 @@
     }
   },
   "icons": {
-    "MaterialDesign": {}
+    "MaterialDesign": {},
+    "zwicon": {}
   }
 }

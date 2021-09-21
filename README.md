@@ -8,6 +8,25 @@ The only svelte graphics package you will ever need.
 npm i svelte-graphics
 ```
 
+## Available Libraries
+
+### Icons
+
+- MaterialDesign - original icons at [materialdesignicons.com](https://materialdesignicons.com).
+- Zwicon by zwoelf - original icon set at [www.zwicon.com](https://www.zwicon.com/)
+
+### Illustrations
+
+- unDraw - original illustrations at [undraw.co](https://undraw.co).
+- Scale - single color illustrations at [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations).
+- ScaleMulti - Multi-color illustrations at [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations).
+- ScaleMultiMask - Same illustrations as above but with characters wearing masks.
+
+**Note**: File names are PascalCased from the original SVG names:
+
+- **Attached file** converts to **AttachedFile.svelte**.
+- **ab-testing** converts to **AbTesting**.
+
 ## Usage
 
 Use one of the following options:
@@ -86,24 +105,6 @@ Please note that saving space by using this option only applies to total bundle 
 ```
 
 **Note:** In the future, individual components will be easily served through our website avoiding the need for installing the NPM dependency and as a result save significant bundle space.
-
-## Available Libraries
-
-### Icons
-
-- MaterialDesign - original icons at [materialdesignicons.com](https://materialdesignicons.com).
-
-### Illustrations (illus)
-
-- unDraw - original illustrations at [undraw.co](https://undraw.co).
-- Scale - single color illustrations at [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations).
-- ScaleMulti - Multi-color illustrations at [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations).
-- ScaleMultiMask - Same illustrations as above but with characters wearing masks.
-
-**Note**: File names are PascalCased from the original SVG names:
-
-- **Attached file** converts to **AttachedFile.svelte**.
-- **ab-testing** converts to **AbTesting**.
 
 ## Notes
 
