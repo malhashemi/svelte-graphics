@@ -1,6 +1,6 @@
 {
   "name": "svelte-graphics",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Library of svelte components created from numerous royalty-free illustrations and icons",
   "main": "build.js",
   "scripts": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohadel1990/svelte-graphics.git"
+    "url": "git+https://github.com/malhashemi/svelte-graphics.git"
   },
   "author": "Mohammad Alhashemi",
   "license": "MIT",
   "bugs": {
     "url": ""
   },
-  "homepage": "https://github.com/mohadel1990/svelte-graphics#readme",
+  "homepage": "https://github.com/malhashemi/svelte-graphics#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "edge-js": "^16.6.0"
