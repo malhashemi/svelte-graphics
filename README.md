@@ -14,19 +14,19 @@ npm i svelte-graphics
 
 - MaterialDesign - [materialdesignicons.com](https://materialdesignicons.com).
 - Zwicon by zwoelf - [www.zwicon.com](https://www.zwicon.com/).
-- Unicon by iconscout - Library includes:
+- Unicon by iconscout [iconscout.com/unicons](https://iconscout.com/unicons/)  
+Library includes:
   - UniconsLine
   - UniconsSolid
   - UniconsThinline
   - UniconsMonochrome
-[iconscout.com/unicons](https://iconscout.com/unicons/).
 
 ### Illustrations
 
 - unDraw - [undraw.co](https://undraw.co).
 - Scale - Library includes:
-  - Scale (single color) [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations).
-  - ScaleMulti - (Multi-color) [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations).
+  - Scale (single color) [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations)
+  - ScaleMulti - (Multi-color) [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations)
   - ScaleMultiMask - Same illustrations as above but with characters wearing masks.
 
 **Note**: File names are PascalCased from the original SVG names:
