@@ -133,8 +133,8 @@ This is a compiler that transforms the SVG files to svelte components utilizing 
 To develop:
 
 ```sh
-git clone https://github.com/mohadel1990/sveltegraphics.git
-cd sveltegraphics
+git clone https://github.com/mohadel1990/svelte-graphics.git
+cd svelte-graphics
 npm i
 npm run build
 ```
