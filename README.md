@@ -8,25 +8,25 @@ The only svelte graphics package you will ever need.
 npm i svelte-graphics
 ```
 
-## Available Libraries
+## Included Libraries
 
 ### Icons
 
-- MaterialDesign - credit to [materialdesignicons.com](https://materialdesignicons.com).
-- Zwicon by zwoelf - credit to [www.zwicon.com](https://www.zwicon.com/).
+- MaterialDesign - [materialdesignicons.com](https://materialdesignicons.com).
+- Zwicon by zwoelf - [www.zwicon.com](https://www.zwicon.com/).
 - Unicon by iconscout - Library includes:
   - UniconsLine
   - UniconsSolid
   - UniconsThinline
   - UniconsMonochrome
-  credit to [iconscout.com/unicons](https://iconscout.com/unicons/).
+[iconscout.com/unicons](https://iconscout.com/unicons/).
 
 ### Illustrations
 
-- unDraw - credit to [undraw.co](https://undraw.co).
+- unDraw - [undraw.co](https://undraw.co).
 - Scale - Library includes:
-  - Scale (single color) credit to [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations).
-  - ScaleMulti - (Multi-color) credit to [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations).
+  - Scale (single color) [https://2.flexiple.com/scale/all-illustrations](https://2.flexiple.com/scale/all-illustrations).
+  - ScaleMulti - (Multi-color) [https://2.flexiple.com/scale/multi-color-illustrations](https://2.flexiple.com/scale/multi-color-illustrations).
   - ScaleMultiMask - Same illustrations as above but with characters wearing masks.
 
 **Note**: File names are PascalCased from the original SVG names:
@@ -38,10 +38,10 @@ npm i svelte-graphics
 
 Use one of the following options:
 
-- [Using SvelteGraphics Controller](#using-sveltegraphics-controller)
-- [Using Individual Components](#using-individual-components)
+- [Using SvelteGraphics Controller](#option-1-using-sveltegraphics-controller)
+- [Using Individual Components](#option-2-using-individual-components)
 
-### Using SvelteGraphics Controller
+### Option 1: Using SvelteGraphics Controller
 
 ```svelte
 <!-- App.svelte -->
@@ -77,7 +77,7 @@ Use one of the following options:
 
 **Note:** `SvelteGraphic`, and `color` are reactive by design, feel free to bind them to user inputs.
 
-### Using Individual Components
+### Option 2: Using Individual Components
 
 Please note that saving space by using this option only applies to total bundle size. The package has no effect on user loading times as its utilizing dynamic imports for loading components.
 
