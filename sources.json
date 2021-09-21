@@ -19,6 +19,18 @@
   },
   "icons": {
     "MaterialDesign": {},
-    "zwicon": {}
+    "zwicon": {},
+    "UniconLine": {
+      "color": "#6563ff"
+    },
+    "UniconsSolid": {
+      "color": "#6563ff"
+    },
+    "UniconsThinline": {
+      "color": "#6563ff"
+    },
+    "UniconsMonochrome": {
+      "color": "#6563ff"
+    }
   }
 }
