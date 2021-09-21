@@ -1,7 +1,5 @@
 # Svelte Graphics
 
-The only svelte graphics package you will ever need.
-
 Svelte Graphics is a library of svelte components created from numerous royalty-free illustrations and icons.
 
 ## Install
