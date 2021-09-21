@@ -1,6 +1,6 @@
 {
   "name": "svelte-graphics",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library of svelte components created from numerous royalty-free illustrations and icons",
   "main": "build.js",
   "scripts": {
