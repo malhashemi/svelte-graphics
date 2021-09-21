@@ -1,6 +1,6 @@
 {
   "name": "svelte-graphics",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Svelte Graphics Generator",
   "main": "build.js",
   "scripts": {

@@ -10,6 +10,11 @@ npm i svelte-graphics
 
 ## Usage
 
+Use one of the following options:
+
+- [Using SvelteGraphics Controller](#using-sveltegraphics-controller)
+- [Using Individual Components](#using-individual-components)
+
 ### Using SvelteGraphics Controller
 
 ```svelte
@@ -48,6 +53,8 @@ npm i svelte-graphics
 
 ### Using Individual Components
 
+Please note that saving space by using this option only applies to total bundle size. The package has no effect on user loading times as its utilizing dynamic imports for loading components.
+
 1. Delete svelte-graphics from package.json dependencies.
 2. Copy needed components from `node_modules/svelte-graphics` to your components folder ex. `./components/illustrations/`.
 3. Consume the components as per the example below:
@@ -57,11 +64,15 @@ npm i svelte-graphics
 <script>
   import Camping from "./components/illustrations/Camping.svelte";
   let size = "700";
+  /*
+  size is overwritten by either width or height
+  default is "500px" for illustrations and "1em" for icons if not set
+  */
   let width = "700";
   let height = "700";
-  let color1 = "#282F4F";
-  let color2 = "#157075";
-  let color3 = "#803155";
+  let color1 = "#282F4F"; // default "currentColor"
+  let color2 = "#157075"; // default "currentColor"
+  let color3 = "#803155"; // default "currentColor"
 </script>
 
 <Camping
@@ -73,6 +84,8 @@ npm i svelte-graphics
   height="{height}"
 />
 ```
+
+**Note:** In the future, individual components will be easily served through our website avoiding the need for installing the NPM dependency and as a result save significant bundle space.
 
 ## Available Libraries
 
