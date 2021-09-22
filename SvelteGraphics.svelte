@@ -1,59 +1,71 @@
 <script>
-	export let SvelteGraphic;
-	export let SvelteGraphicSpecs = {
-		lib: ``,
-		type: ``
-	};
-	import { onMount } from 'svelte';
-	let graphic;
+  export let SvelteGraphic;
+  export let SvelteGraphicSpecs = {
+    lib: ``,
+    type: ``,
+  };
 
-	let lib;
-	let type;
-	let size;
-	let width;
-	let height;
-	let color;
-	let color1;
-	let color2;
-	let color3;
-	let modules;
-	let path;
+  let graphic;
 
-	$: graphic = SvelteGraphic;
+  let lib;
+  let type;
+  let size;
+  let width;
+  let height;
+  let color;
+  let color1;
+  let color2;
+  let color3;
+  let modules;
+  let path;
 
-	type = SvelteGraphicSpecs.type;
-	lib = SvelteGraphicSpecs.lib;
+  $: graphic = SvelteGraphic;
 
-	switch (type) {
-		case `icon`:
-			type = 'icons';
-			size = SvelteGraphicSpecs.size ? SvelteGraphicSpecs.size : `1em`;
-			break;
-		case `illus`:
-			type = 'illustrations';
-			size = SvelteGraphicSpecs.size ? SvelteGraphicSpecs.size : `500`;
-			break;
+  type = SvelteGraphicSpecs.type;
+  lib = SvelteGraphicSpecs.lib;
 
-		default:
-			throw `Invalid Graphic type: ${type}`;
-	}
+  switch (type) {
+    case `icon`:
+      type = "icons";
+      size = SvelteGraphicSpecs.size ? SvelteGraphicSpecs.size : `1em`;
+      break;
+    case `illus`:
+      type = "illustrations";
+      size = SvelteGraphicSpecs.size ? SvelteGraphicSpecs.size : `500`;
+      break;
+    case `icons`:
+      size = SvelteGraphicSpecs.size ? SvelteGraphicSpecs.size : `1em`;
+      break;
+    case `illustrations`:
+      size = SvelteGraphicSpecs.size ? SvelteGraphicSpecs.size : `500`;
+      break;
 
-	width = SvelteGraphicSpecs.width ? SvelteGraphicSpecs.width : size;
-	height = SvelteGraphicSpecs.height ? SvelteGraphicSpecs.height : size;
+    default:
+      throw `Invalid Graphic type: ${type}`;
+  }
 
-	$: color = SvelteGraphicSpecs.color ? SvelteGraphicSpecs.color : `currentColor`;
-	$: color1 = SvelteGraphicSpecs.color1 ? SvelteGraphicSpecs.color1 : color;
-	$: color2 = SvelteGraphicSpecs.color2 ? SvelteGraphicSpecs.color2 : color;
-	$: color3 = SvelteGraphicSpecs.color3 ? SvelteGraphicSpecs.color3 : color;
-	//let viewBox = SvelteGraphicSpecs.viewBox ? SvelteGraphicSpecs.viewBox : `0 0 24 24`;
+  width = SvelteGraphicSpecs.width ? SvelteGraphicSpecs.width : size;
+  height = SvelteGraphicSpecs.height ? SvelteGraphicSpecs.height : size;
 
+  $: color = SvelteGraphicSpecs.color
+    ? SvelteGraphicSpecs.color
+    : `currentColor`;
+  $: color1 = SvelteGraphicSpecs.color1 ? SvelteGraphicSpecs.color1 : color;
+  $: color2 = SvelteGraphicSpecs.color2 ? SvelteGraphicSpecs.color2 : color;
+  $: color3 = SvelteGraphicSpecs.color3 ? SvelteGraphicSpecs.color3 : color;
+  //let viewBox = SvelteGraphicSpecs.viewBox ? SvelteGraphicSpecs.viewBox : `0 0 24 24`;
 
-	
-	$: path = `./${type}/${lib}/${graphic}.svelte`;
-	$: onMount(async () => {
-		modules = (await import(/* @vite-ignore */path)).default;
-	});
-
+  $: path = `./${type}/${lib}/${graphic}.svelte`;
+  $: import(/* @vite-ignore */ path).then((res) => (modules = res.default));
 </script>
 
-<svelte:component this={modules} {color} {color1} {color2} {color3} {size} {width} {height} />
+<svelte:component
+  this="{modules}"
+  color="{color}"
+  color1="{color1}"
+  color2="{color2}"
+  color3="{color3}"
+  size="{size}"
+  width="{width}"
+  height="{height}"
+/>
